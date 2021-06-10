@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 
-$fontPage: 'Bebas Neue', cursive;
-$fontText: 'Montserrat', sans-serif;
-$green: #B2DD9E;
-$blue: #7988BE;
+$fontPage: "Bebas Neue", cursive;
+$fontText: "Montserrat", sans-serif;
+$green: #b2dd9e;
+$blue: #7988be;
+$darkBlue: #303853;
 
 body {
   margin: 0;
@@ -16,7 +17,8 @@ body {
   font-size: 1.125rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
   margin: 0;
 }
@@ -26,6 +28,10 @@ h1 {
   line-height: 91.6%;
 }
 
+h2 {
+  font-size: 2.25rem;
+}
+
 p {
   font-family: $fontText;
   line-height: 141.6%;
@@ -33,11 +39,21 @@ p {
 
 figure,
 figure p {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 1.5rem;
   font-family: $fontPage;
 }
 
 img {
   width: 100%;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 3em 0;
 }
 
 header {
@@ -58,8 +74,8 @@ nav {
   align-items: flex-end;
   text-align: end;
   padding: 2.3125em 2em 0 0;
-  height: 100vh;
-  background: #363B4E;
+  height: calc(100vh + 1em);
+  background: #363b4e;
   width: 100%;
   position: fixed;
   left: 0;
@@ -86,11 +102,11 @@ nav {
   display: flex;
   background: black;
   justify-content: center;
-  width: 135px;   
+  width: 135px;
 }
 
 .logo span {
-  color: #6889FF;
+  color: #6889ff;
 }
 
 .logo p {
@@ -98,7 +114,7 @@ nav {
   font-size: 1.625rem;
   color: white;
   margin: 0;
-  padding: .25em .75em;
+  padding: 0.25em 0.75em;
 }
 
 ul {
@@ -123,36 +139,36 @@ ul a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: $green url('../assets/streaks.jpg');
+  background: $green url("../assets/streaks.jpg");
   background-blend-mode: screen;
   background-size: cover;
   background-position: 40% 0;
-  height: 100vh;
+  height: calc(100vh + 1em);
+  padding-top: 8em;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   background: $blue;
-  width: 64px;
+  width: 12.5%;
   right: 0;
   top: 0;
 }
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
-  background: #FFF;
-  width: 64px;
+  background: #fff;
+  width: 12.5%;
   left: 0;
   top: 0;
 }
 
 .content {
-  margin-top: 8em;
-  width: 300px;
+  max-width: 250px;
 }
 
 .drone-container {
@@ -171,5 +187,104 @@ ul a {
   bottom: -20px;
   left: 0;
   z-index: 1;
-  opacity: .15;
+  opacity: 0.15;
+}
+
+.quote {
+  position: relative;
+  height: 100vh;
+  background: $darkBlue;
+  color: white;
+}
+
+.quote::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("../assets/stadium.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10%;
+  opacity: 0.17;
+}
+
+.quote::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background: #fff;
+  width: 12.5%;
+  left: 0;
+  top: 0;
+}
+
+.quote figure {
+  width: 300px;
+  margin: 0 auto;
+  padding-left: 1em;
+}
+
+figcaption,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 2em;
+  padding-left: 2em;
+  font-size: 1.125rem;
+  position: relative;
+}
+
+figcaption::before {
+  content: "";
+  height: 1px;
+  width: 28px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.container-gallery {
+  height: 800px;
+}
+
+.gallery {
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    ". d b"
+    "e c ."
+    ". a .";
+  margin-top: 2.5em;
+}
+
+.gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: 117px;
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.e {
+  grid-area: e;
 }
