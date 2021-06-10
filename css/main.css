@@ -4,4 +4,89 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.125rem;
+}
+
+h1, h2 {
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.0625rem;
+  line-height: 91.6%;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 141.6%;
+}
+
+figure,
+figure p {
+  font-family: "Bebas Neue", cursive;
+}
+
+img {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: #B2DD9E url("../assets/streaks.jpg");
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: 40% 0;
+  height: 100vh;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background: #7988BE;
+  width: 64px;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  margin-top: 8em;
+  width: 300px;
+}
+
+.drone-container {
+  position: relative;
+  margin-top: 4em;
+}
+
+.drone {
+  position: relative;
+  z-index: 2;
+  width: 250px;
+}
+
+.drone-shadow {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  z-index: 1;
+  opacity: .15;
+}
 /*# sourceMappingURL=main.css.map */
