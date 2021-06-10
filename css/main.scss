@@ -321,3 +321,111 @@ button {
 .contact a {
   color: black;
 }
+
+@media (min-width: 900px) {
+  html {
+    font-size: 20px;
+  }
+
+  .top-bg-container {
+    width: 80%;
+    grid-template-columns: 60% auto;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    display: flex;
+    text-align: left;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 5rem;
+    width: 80%;
+  }
+
+  .hero-text p {
+    width: 80%;
+  }
+
+  .menu-btn,
+  .exit-btn {
+    display: none;
+  }
+
+  nav ul {
+    transform: translateX(0) !important;
+    background: 0;
+    position: unset;
+    display: flex;
+    align-items: center;
+    width: unset;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  nav ul a {
+    font-size: 1rem;
+    padding: 0 1em;
+  }
+
+  // quote section
+  .quote {
+    width: 80%;
+    display: grid;
+    place-content: center;
+  }
+
+  blockquote, cite {
+    width: 80%;
+    max-width: 900px;
+    justify-self: center;
+  }
+
+  blockquote {
+    font-size: 2rem;
+  }
+
+  // gallery
+  .gallery {
+    display: flex;
+    gap: 4em;
+  }
+
+  .gallery-container {
+    margin-top: -5em;
+    z-index: 1;
+  }
+
+  .gallery h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    line-height: 91.6%;
+  }
+
+  // footer 
+  .cols-2 {
+    display: flex;
+    gap: 3em;
+  }
+
+  .form, .contact {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .contact {
+    margin-top: 2em;
+  }
+
+  input {
+    padding: 1.5em;
+  }
+}
