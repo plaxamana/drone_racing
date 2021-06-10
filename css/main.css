@@ -48,7 +48,6 @@ img {
 .container {
   width: 75%;
   margin: 0 auto;
-  padding: 3em 0;
 }
 
 header {
@@ -65,6 +64,11 @@ header {
   z-index: 5;
   width: 100%;
   padding: 0 1em;
+  max-width: 1030px;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 nav {
@@ -196,6 +200,7 @@ ul a {
 }
 
 .content {
+  position: relative;
   max-width: 250px;
 }
 
@@ -251,6 +256,7 @@ ul a {
   width: 300px;
   margin: 0 auto;
   padding-left: 1em;
+  padding-top: 3em;
 }
 
 figcaption,
@@ -274,6 +280,10 @@ figcaption::before {
   position: absolute;
   top: 50%;
   left: 0;
+}
+
+.left-col {
+  padding-top: 3em;
 }
 
 .container-gallery {
@@ -329,6 +339,11 @@ figcaption::before {
 
 footer {
   background: #b2dd9e;
+  padding: 0 0 1em 0;
+}
+
+.form {
+  margin-top: 3em;
 }
 
 .register {
@@ -368,6 +383,7 @@ label {
 }
 
 input {
+  font-size: 1rem;
   border: 0;
   padding: 1rem;
 }
@@ -392,5 +408,11 @@ input {
   width: 50%;
   background: rgba(0, 0, 0, 0.2);
   bottom: -8px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 1030px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
