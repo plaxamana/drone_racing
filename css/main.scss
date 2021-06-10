@@ -173,6 +173,7 @@ ul a {
 
 .content {
   position: relative;
+  z-index: 6;
   max-width: 250px;
 }
 
@@ -363,7 +364,44 @@ input {
 }
 
 @media (min-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+
   .container {
     max-width: 1030px;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    transform: translateX(0);
+    height: unset;
+    background: 0;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    flex: 1;
+  }
+
+  ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul a {
+    margin-left: 1em;
+    padding: 0;
+    display: block;
+  }
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
   }
 }

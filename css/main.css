@@ -201,6 +201,7 @@ ul a {
 
 .content {
   position: relative;
+  z-index: 6;
   max-width: 250px;
 }
 
@@ -411,8 +412,56 @@ input {
 }
 
 @media (min-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
   .container {
     max-width: 1030px;
+  }
+  .open-menu,
+  .close-menu {
+    display: none;
+  }
+  nav {
+    position: static;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    height: unset;
+    background: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  ul a {
+    margin-left: 1em;
+    padding: 0;
+    display: block;
+  }
+  .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=main.css.map */
