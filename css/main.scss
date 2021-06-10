@@ -40,6 +40,83 @@ img {
   width: 100%;
 }
 
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  width: 100%;
+  padding: 0 1em;
+}
+
+nav {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+  padding: 2.3125em 2em 0 0;
+  height: 100vh;
+  background: #363B4E;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.open-menu,
+.close-menu {
+  cursor: pointer;
+}
+
+.open-menu {
+  width: 32px;
+}
+
+.close-menu {
+  width: 24px;
+  margin-bottom: 2.375em;
+}
+
+.logo {
+  display: flex;
+  background: black;
+  justify-content: center;
+  width: 135px;   
+}
+
+.logo span {
+  color: #6889FF;
+}
+
+.logo p {
+  font-family: $fontPage;
+  font-size: 1.625rem;
+  color: white;
+  margin: 0;
+  padding: .25em .75em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+ul a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.34em 0;
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -60,6 +137,16 @@ img {
   background: $blue;
   width: 64px;
   right: 0;
+  top: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background: #FFF;
+  width: 64px;
+  left: 0;
   top: 0;
 }
 

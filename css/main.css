@@ -36,6 +36,109 @@ img {
   width: 100%;
 }
 
+header {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+  width: 100%;
+  padding: 0 1em;
+}
+
+nav {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: end;
+  padding: 2.3125em 2em 0 0;
+  height: 100vh;
+  background: #363B4E;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.open-menu,
+.close-menu {
+  cursor: pointer;
+}
+
+.open-menu {
+  width: 32px;
+}
+
+.close-menu {
+  width: 24px;
+  margin-bottom: 2.375em;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 135px;
+}
+
+.logo span {
+  color: #6889FF;
+}
+
+.logo p {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.625rem;
+  color: white;
+  margin: 0;
+  padding: .25em .75em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+ul a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.34em 0;
+}
+
 .hero {
   position: relative;
   display: -webkit-box;
@@ -63,6 +166,16 @@ img {
   background: #7988BE;
   width: 64px;
   right: 0;
+  top: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background: #FFF;
+  width: 64px;
+  left: 0;
   top: 0;
 }
 
