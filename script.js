@@ -1,5 +1,5 @@
-const openMenu = document.querySelector('.open-menu')
-      closeMenu = document.querySelector('.close-menu')
+const openMenu = document.querySelector('.menu-btn')
+      closeMenu = document.querySelector('.exit-btn')
       nav = document.getElementById('nav');
 
 openMenu.addEventListener('click', () => {

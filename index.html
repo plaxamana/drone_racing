@@ -12,16 +12,19 @@
 </head>
 
 <body>
+  <div class="top-bg-container">
+    <div class="streaks"></div>
+    <div class="bg-blue"></div>
+  </div>
 
-  <header >
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo"><span>Drone</span>.Series</a>
 
-    <div class="logo">
-      <p><span>Drone</span>.Series</p>
-    </div>
-    <img src="./assets/menu.svg" alt="menu" class="open-menu">
-    <nav id="nav">
-      <img src="./assets/exit.svg" alt="close menu" class="close-menu">
-      <ul>
+      <img src="./assets/menu.svg" alt="menu" class="menu-btn">
+
+      <ul id="nav">
+        <li class="exit-btn"><img src="./assets/exit.svg" alt="close menu"></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Races</a></li>
         <li><a href="#">Register</a></li>
@@ -29,59 +32,49 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-  </header>
 
-  <section class="hero">
-    <div class="content">
-      <h1>Drone racing<br> gone wild</h1>
-      <p>Register now for the ultimate drone racing event. 5 mile courses and over $10 million in prize money!</p>
-    </div>
-
-    <div class="drone-container">
-      <img src="./assets/drone.png" alt="drone" class="drone">
-      <img src="./assets/blur.png" alt="drone shadow" class="drone-shadow">
-    </div>
-  </section>
+    <main>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Drone Racing Gone Wild</h1>
+          <p>Register now for the ultimate drone racing event. 5 mile courses and over $10 million in prize money!</p>
+        </div>
+        <div class="drone-container">
+          <img src="./assets/blur.png" alt="drone shadow" class="blur">
+          <img src="./assets/drone.png" alt="drone" class="drone">
+        </div>
+      </div>
+    </main>
+  </div>
 
   <section class="quote">
-    <div class="container">
-
-      <figure>
-        <blockquote>
-          <p>"The stadium is simply unreal. Scrimba Hall will make this the best drone racing event ever, period."</p>
-        </blockquote>
-        <figcaption>Anonymous Guy</figcaption>
-      </figure>
-
-    </div>
+    <blockquote>
+      “the stadium is simply unreal. scrimba hall will make this the best drone racing event ever, period.”
+    </blockquote>
+    <cite>Anonymous guy</cite>
   </section>
 
-  <section>
-    <div class="container container-gallery">
-      <div class="left-col">
-        <h2>Last Year's Footage</h2>
-        <p>With over 5,000 participants, 2020 featured some of the most amazing drone races from the most competitive
-          field
-          ever
-          seen.</p>
-        <p>in 2021, we’re about to double the excitement with 10,000 race participants and 100,000 fans!</p>
-      </div>
-
-      <!-- right col -->
-      <div class="gallery">
-        <img src="./assets/footage-1.jpg" alt="drone footage" class="a">
-        <img src="./assets/footage-2.jpg" alt="drone footage" class="b">
-        <img src="./assets/footage-3.jpg" alt="drone footage" class="c">
-        <img src="./assets/footage-4.jpg" alt="drone footage" class="d">
-        <img src="./assets/footage-5.jpg" alt="drone footage" class="e">
-      </div>
+  <section class="gallery">
+    <div class="footage-content">
+      <h2>Last Year’s Footage</h2>
+      <p>With over 5,000 participants, 2020 featured some of the most amazing drone races from the most competitive
+        field ever
+        seen.</p>
+      <p>In 2021, we’re about to double the excitement with 10,000 race participants and 100,000 fans!</p>
+    </div>
+    <div class="gallery-container">
+      <img src="./assets/footage-1.jpg" class="e">
+      <img src="./assets/footage-2.jpg" class="b">
+      <img src="./assets/footage-3.jpg" class="d">
+      <img src="./assets/footage-4.jpg" class="a">
+      <img src="./assets/footage-5.jpg" class="c">
     </div>
   </section>
 
   <footer>
-    <h2 class="register">Register for the event!</h2>
+    <h2>Register For The Event!</h2>
 
-    <div class="container">
+    <div class="cols-2">
       <form action="#" class="form">
         <div class="input-group">
           <label for="name">Name</label>
@@ -91,12 +84,13 @@
           <label for="email">Email</label>
           <input type="email" name="email" id="email">
         </div>
-        <button type="submit" class="cta">Register Now!</button>
+  
+        <button type="submit">Register Now!</button>
       </form>
-
+  
       <div class="contact">
         <p>1-555-555-3298</p>
-        <p>some@email.com</p>
+        <a href="#">some@email.com</a>
       </div>
     </div>
   </footer>
